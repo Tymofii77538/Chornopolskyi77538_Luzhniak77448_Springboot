@@ -1,25 +1,31 @@
-# Dokumentacja Zadania: Hosting Aplikacji Spring Boot
-**Student:** Tymofii Chornopolskyi
-**ID:** 77538
+# Dokumentacja Projektu: Backend Spring Boot
+**Skład zespołu:** Tymofii Chornopolskyi  
+**ID Studenta:** 77538
 
-## Opis sprawdzonych platform
+## Krótki opis aplikacji
+Aplikacja stanowi prosty backend zbudowany w technologii Spring Boot, który służy jako wprowadzenie do komunikacji frontendu z serwerem. Głównym celem projektu było stworzenie działającego punktu końcowego (endpointu), który zwraca dane identyfikacyjne studenta poza lokalną przeglądarką użytkownika.
 
-W ramach zadania sprawdzono i przetestowano platformę **Railway** jako środowisko do hostingu aplikacji Java/Spring Boot.
+## Informacje o wdrożeniu
+- **Endpoint do sprawdzenia:** `https://chornopolskyi77538.up.railway.app/hello` 
+- **Publiczny URL:** `chornopolskyi77538springboot-production.up.railway.app`
+- **Sprawdzone platformy:** Railway, GitHub
 
-### Railway
-- **Charakterystyka:** Platforma typu PaaS (Platform as a Service), która automatycznie wykrywa technologię projektu na podstawie plików w repozytorium (np. `pom.xml` dla Maven).
-- **Zalety:** Bardzo szybka integracja z GitHubem, automatyczny proces Build & Deploy po każdym `git push`, przejrzysty panel kontrolny i logi serwerowe.
-- **Konfiguracja:** Wykorzystano wsparcie dla Javy 17 oraz pakowanie do formatu JAR, co pozwoliło na uruchomienie aplikacji z wbudowanym serwerem Tomcat.
+## Instrukcja uruchomienia lokalnego
+1. Sklonuj repozytorium z GitHub.
+2. Otwórz projekt w środowisku VS Code lub IntelliJ IDEA.
+3. Upewnij się, że masz zainstalowane JDK 17.
+4. Uruchom aplikację za pomocą komendy `./mvnw spring-boot:run` lub bezpośrednio z pliku `SpringbootZadanieApplication.java`.
+5. Aplikacja będzie dostępna pod adresem `http://localhost:8080/hello`.
 
-## Wnioski
+## Wnioski (Perspektywa początkującego)
 
-### Co było łatwe?
-1. **Początkowa konfiguracja:** Dzięki narzędziu Spring Initializr przygotowanie bazy projektu nie wymagało znajomości skomplikowanych struktur plików XML czy Maven – wystarczyło zaznaczyć odpowiednie opcje w generatorze.
-2. **Pisanie prostego kodu:** Sam sposób tworzenia endpointów za pomocą adnotacji (np. `@RestController`) okazał się bardzo czytelny i łatwy do zrozumienia, nawet bez wcześniejszego doświadczenia w Javie.
-3. **Automatyczny proces wdrożenia:** Po poprawnym skonfigurowaniu połączenia z GitHubem, proces publikacji aplikacji w internecie odbywał się samoczynnie, co oszczędziło czas na ręczną konfigurację serwera.
+### Co się udało (Co było łatwe)?
+- **Szybki start:** Dzięki generatorowi Spring Initializr, proces tworzenia szkieletu aplikacji był bezproblemowy nawet bez wcześniejszego doświadczenia.
+- **Logika endpointów:** Tworzenie prostych odpowiedzi tekstowych za pomocą adnotacji `@GetMapping` okazało się bardzo intuicyjne i łatwe do zrozumienia od strony programistycznej.
 
-### Co było trudne (Problemy osoby początkującej)?
-1. **Zrozumienie struktury pakietów Java:** Największym problemem była ścisła zależność między strukturą folderów a deklaracją `package` w kodzie. Jako osoba nowa w Spring Boot, nie spodziewałem się, że błąd w jednej linijce na samej górze pliku uniemożliwi uruchomienie całej aplikacji.
+### Co się nie udało (Co było trudne)?
+- **Błędy w strukturze projektu:** Jako osoba początkująca, nie wiedziałem, że platforma Railway wymaga plików konfiguracyjnych (`pom.xml`) bezpośrednio w katalogu głównym repozytorium. Umieszczenie ich w podfolderze zablokowało pierwszą próbę budowania aplikacji.
 
-### Co warto wybrać dalej?
-Dla dalszego rozwoju projektu, szczególnie przy dodawaniu bazy danych (część 2 zadania), warto pozostać przy **Railway**. Platforma ta oferuje łatwe dodawanie baz PostgreSQL/MySQL za pomocą jednego kliknięcia i automatyczne wstrzykiwanie zmiennych środowiskowych, co jest znacznie prostsze niż ręczna konfiguracja serwerów VPS.
+
+### Podsumowanie i wybór platformy
+Biorąc pod uwagę zerowe doświadczenie ze Spring Bootem przed tym zadaniem, uważam, że **Railway** jest najlepszą platformą do kontynuowania nauki. Mimo trudności z początkową konfiguracją i logami, automatyzacja, którą oferuje, jest znacznie bardziej przystępna niż ręczne zarządzanie serwerem.
