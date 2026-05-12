@@ -8,13 +8,11 @@ public class HelloController {
 
     @GetMapping("/")
     public String home() {
-        // Komentarz: Strona główna aplikacji
         return "Serwer działa poprawnie! ID: 77538";
     }
 
     @GetMapping("/api/status")
     public String getStatus() {
-        // Komentarz: Dodatkowy endpoint sprawdzający status
         return "Status: OK. Aplikacja gotowa do hostingu publicznego.";
     }
 }
