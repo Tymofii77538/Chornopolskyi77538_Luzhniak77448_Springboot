@@ -1,6 +1,7 @@
 # Dokumentacja Projektu: Backend Spring Boot
-**Skład zespołu:** Tymofii Chornopolskyi  
-**ID Studenta:** 77538
+**Nazwa zespołu** Katarenai Memurenai
+**Skład zespołu:** Tymofii Chornopolskyi, Volodymyr Luzhniak
+**ID Studenta:** 77538, 77448
 
 ## Krótki opis aplikacji
 Aplikacja stanowi prosty backend zbudowany w technologii Spring Boot, który służy jako wprowadzenie do komunikacji frontendu z serwerem. Głównym celem projektu było stworzenie działającego punktu końcowego (endpointu), który zwraca dane identyfikacyjne studenta poza lokalną przeglądarką użytkownika.
@@ -8,7 +9,7 @@ Aplikacja stanowi prosty backend zbudowany w technologii Spring Boot, który sł
 ## Informacje o wdrożeniu
 - **Endpoint do sprawdzenia:** `https://chornopolskyi77538.up.railway.app/hello` 
 - **Publiczny URL:** `chornopolskyi77538springboot-production.up.railway.app`
-- **Sprawdzone platformy:** Railway, GitHub
+- **Sprawdzone platformy:** Railway, GitHub, Azure
 
 ## Instrukcja uruchomienia lokalnego
 1. Sklonuj repozytorium z GitHub.
