@@ -8,7 +8,9 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String home() {
-        return "Serwer działa poprawnie! Tymofii Chornopolskyi ID: 77538";
+        return "Serwer działa poprawnie! "
+            "Tymofii Chornopolskyi ID: 77538"
+            "Volodymyr Luzhniak ID: 77448";
     }
 
     @GetMapping("/api/status")
